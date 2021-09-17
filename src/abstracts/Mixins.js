@@ -1,4 +1,4 @@
-import { css } from "styled-components";
+import { css } from 'styled-components';
 
 const flexCenter = css`
   display: flex;
@@ -7,7 +7,7 @@ const flexCenter = css`
 `;
 
 const headingStyles = css`
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: 0.1rem;
   line-height: 1.3;
 `;

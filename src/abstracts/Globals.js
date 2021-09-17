@@ -37,7 +37,7 @@ const Globals = createGlobalStyle`
   }
 
   body {
-    font-family: 'Space Mono', monospace;
+    font-family: 'Rubik', sans-serif;
     overflow-x: hidden;
     background-color: ${({ theme }) => theme.mainBg};
     transition: var(--mainTransition);

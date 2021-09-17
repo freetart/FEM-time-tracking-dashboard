@@ -3,6 +3,7 @@ import Globals from './abstracts/Globals';
 import styled, { ThemeProvider } from 'styled-components';
 import { lightTheme, darkTheme } from './abstracts/Themes';
 import { sectionSpacingLg } from './abstracts/Mixins';
+import Header from './components/Header';
 
 const Main = styled.main`
   ${sectionSpacingLg}
@@ -21,7 +22,9 @@ const App = () => {
     <>
       <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
         <Globals />
-        <Main></Main>
+        <Main>
+          <Header theme={theme} themeToggler={themeToggler} />
+        </Main>
       </ThemeProvider>
     </>
   );
