@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import Globals from './abstracts/Globals';
+import styled, { ThemeProvider } from 'styled-components';
+import { lightTheme, darkTheme } from './abstracts/Themes';
+import { sectionSpacingLg } from './abstracts/Mixins';
 
-function App() {
+const Main = styled.main`
+  ${sectionSpacingLg}
+  max-width: 800px;
+  margin: 0 auto;
+`;
+
+const App = () => {
+  const [theme, setTheme] = useState('dark');
+
+  const themeToggler = () => {
+    theme === 'light' ? setTheme('dark') : setTheme('light');
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
+        <Globals />
+        <Main></Main>
+      </ThemeProvider>
+    </>
   );
-}
+};
 
 export default App;
