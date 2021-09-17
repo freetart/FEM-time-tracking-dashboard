@@ -7,6 +7,7 @@ const Wrapper = styled.header`
   align-items: center;
   justify-content: space-between;
   gap: var(--gap);
+  margin-bottom: 5rem;
 
   .title {
     ${headingStyles}

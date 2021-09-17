@@ -1,4 +1,4 @@
-[
+export const timesData = [
   {
     title: 'Work',
     timeframes: {
