@@ -3,11 +3,16 @@ import profileImage from '../assets/image-jeremy.png';
 import Paragraph from '../components/styledElements/Paragraphs';
 import { ProfileHeading } from '../components/styledElements/Headings';
 import { textStyles } from '../abstracts/Mixins';
+import Responsive from '../abstracts/Responsive';
 
 const Wrapper = styled.article`
   display: flex;
   flex-direction: column;
   gap: 2rem;
+
+  ${Responsive.md`
+    text-align: center;
+  `}
 
   .top {
     background-color: ${({ theme }) => theme.blue};
@@ -31,6 +36,12 @@ const Wrapper = styled.article`
     border-radius: var(--mainRadius);
     transition: var(--mainTransition);
     box-shadow: var(--mainShadow);
+
+    ${Responsive.md`
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+    `}
   }
 
   .tab {
