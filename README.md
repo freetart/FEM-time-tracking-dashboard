@@ -2,6 +2,8 @@
 
 dashboard challenge for frontend mentor
 
+site: https://fem-time-tracking-dashboard-challenge.netlify.app/
+
 #### Features
 - dark/light mode
 - tab functionality 
