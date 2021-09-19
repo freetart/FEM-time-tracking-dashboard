@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import styled from 'styled-components';
 import Profile from './Profile';
-import { timesData } from '../data';
+import Times from './Times';
+import { tabsData, timesData } from '../data';
 
 const Wrapper = styled.section`
   display: grid;
@@ -11,14 +12,13 @@ const Wrapper = styled.section`
 
 const Dashboard = () => {
   const [times, setTimes] = useState(timesData);
+  const [tabs, setTabs] = useState(tabsData);
   const [value, setValue] = useState(0);
-
-  const { title, timeframes } = times[value];
-  console.log(title, timeframes);
 
   return (
     <Wrapper>
-      <Profile setValue={setValue} />
+      <Profile tabs={tabs} value={value} setValue={setValue} />
+      <Times value={value} times={times} />
     </Wrapper>
   );
 };

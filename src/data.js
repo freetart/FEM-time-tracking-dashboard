@@ -1,5 +1,29 @@
+import workIcon from './assets/icon-work.svg';
+import playIcon from './assets/icon-play.svg';
+import studyIcon from './assets/icon-study.svg';
+import exerciseIcon from './assets/icon-exercise.svg';
+import socialIcon from './assets/icon-social.svg';
+import selfcareIcon from './assets/icon-self-care.svg';
+
+export const tabsData = [
+  {
+    id: 1,
+    tabTitle: 'Daily',
+  },
+  {
+    id: 2,
+    tabTitle: 'Weekly',
+  },
+  {
+    id: 3,
+    tabTitle: 'Monthly',
+  },
+];
+
 export const timesData = [
   {
+    id: 1,
+    icon: workIcon,
     title: 'Work',
     timeframes: {
       daily: {
@@ -17,6 +41,8 @@ export const timesData = [
     },
   },
   {
+    id: 2,
+    icon: playIcon,
     title: 'Play',
     timeframes: {
       daily: {
@@ -34,6 +60,8 @@ export const timesData = [
     },
   },
   {
+    id: 3,
+    icon: studyIcon,
     title: 'Study',
     timeframes: {
       daily: {
@@ -51,6 +79,8 @@ export const timesData = [
     },
   },
   {
+    id: 4,
+    icon: exerciseIcon,
     title: 'Exercise',
     timeframes: {
       daily: {
@@ -68,6 +98,8 @@ export const timesData = [
     },
   },
   {
+    id: 5,
+    icon: socialIcon,
     title: 'Social',
     timeframes: {
       daily: {
@@ -85,6 +117,8 @@ export const timesData = [
     },
   },
   {
+    id: 6,
+    icon: selfcareIcon,
     title: 'Self Care',
     timeframes: {
       daily: {

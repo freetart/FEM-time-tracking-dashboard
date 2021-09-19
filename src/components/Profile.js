@@ -42,15 +42,13 @@ const Wrapper = styled.article`
     font-size: 1.8rem;
     transition: var(--mainTransition);
 
-    &:hover,
-    &:focus,
-    &:active {
+    &.active-tab {
       color: ${({ theme }) => theme.primaryText};
     }
   }
 `;
 
-const Profile = ({ setValue }) => {
+const Profile = ({ tabs, value, setValue }) => {
   return (
     <Wrapper>
       <div className='top'>
@@ -59,15 +57,15 @@ const Profile = ({ setValue }) => {
         <ProfileHeading>Jeremy Robson</ProfileHeading>
       </div>
       <div className='tabs'>
-        <button className='tab' onClick={() => setValue(0)}>
-          Daily
-        </button>
-        <button className='tab' onClick={() => setValue(1)}>
-          Weekly
-        </button>
-        <button className='tab' onClick={() => setValue(2)}>
-          Monthly
-        </button>
+        {tabs.map((tab, index) => (
+          <button
+            key={tab.id}
+            className={`tab ${index === value && 'active-tab'}`}
+            onClick={() => setValue(index)}
+          >
+            {tab.tabTitle}
+          </button>
+        ))}
       </div>
     </Wrapper>
   );
