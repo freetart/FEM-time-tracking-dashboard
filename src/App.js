@@ -5,6 +5,7 @@ import { lightTheme, darkTheme } from './abstracts/Themes';
 import { sectionSpacingLg, maxWidthMd } from './abstracts/Mixins';
 import Header from './components/Header';
 import Dashboard from './components/Dashboard';
+import Tag from './components/Tag';
 
 const Main = styled.main`
   ${sectionSpacingLg}
@@ -27,6 +28,7 @@ const App = () => {
           <Header theme={theme} themeToggler={themeToggler} />
           <Dashboard />
         </Main>
+        <Tag />
       </ThemeProvider>
     </>
   );
